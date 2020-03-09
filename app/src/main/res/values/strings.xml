@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">IntentSession</string>
+    <string name="name">Enter username</string>
+    <string name="Email">Enter email</string>
+    <string name="phonenumber">Enter phone number</string>
+    <string name="Password">Enter password</string>
+    <string name="Signup">Sign up</string>
+    <string name="url">Enter url</string>
+    <string name="search">Search</string>
+    <string name="permission">Permission check</string>
+
+</resources>

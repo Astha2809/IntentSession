@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/lightpurple">
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/name"
+        android:hint="@string/name"
+        android:layout_marginTop="60dp"
+        android:layout_gravity="center_horizontal"
+        android:textColorHint="@color/black"
+android:padding="10dp"
+        android:background="@drawable/text_background"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/email"
+        android:hint="@string/Email"
+        android:layout_marginTop="60dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/text_background"
+        android:textColorHint="@color/black"
+        android:padding="10dp"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/password"
+        android:hint="@string/Password"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/text_background"
+        android:textColorHint="@color/black"
+        android:padding="10dp"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/phone"
+        android:hint="@string/phonenumber"
+        android:padding="10dp"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/text_background"
+        android:textColorHint="@color/black"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Signup"
+        android:id="@+id/signup"
+        android:textColor="@color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"/>
+
+</LinearLayout>
