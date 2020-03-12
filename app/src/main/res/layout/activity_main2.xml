@@ -10,9 +10,9 @@
 
 
     <WebView
-        android:id="@+id/web"
-        android:layout_width="300dp"
-        android:layout_height="200dp"
+        android:id="@+id/webview_main"
+        android:layout_width="@dimen/webview_main_width"
+        android:layout_height="@dimen/webview_main_height"
         android:background="#E1DCDC" />
 
 

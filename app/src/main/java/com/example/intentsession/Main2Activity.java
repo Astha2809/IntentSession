@@ -2,14 +2,11 @@ package com.example.intentsession;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
-import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -19,32 +16,40 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static com.example.intentsession.BundleConstants.ARG_EMAIL;
+import static com.example.intentsession.BundleConstants.ARG_NAME;
+import static com.example.intentsession.BundleConstants.ARG_PASSWORD;
+import static com.example.intentsession.BundleConstants.ARG_PHONE;
+
 public class Main2Activity extends AppCompatActivity {
-    private static final int REQUEST_CODE = 100;
+    private static final int REQUEST_CODE_CAMERA = 100;
+    TextView tv1;
+    TextView tv2;
+    TextView tv3;
+    TextView tv4;
+    EditText ed;
+    Button button2;
+    Button button3;
+    WebView webView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        TextView tv1 = findViewById(R.id.name1);
-        TextView tv2 = findViewById(R.id.email1);
-        TextView tv3 = findViewById(R.id.number1);
-        TextView tv4 = findViewById(R.id.password1);
-        final EditText ed = findViewById(R.id.url);
-        Button button2 = findViewById(R.id.search);
-        Button button3 = findViewById(R.id.permission);
-        final WebView webView = findViewById(R.id.web);
+        initUi();
+
         //wv1.setWebViewClient(new MyBrowser());
 
         Intent intent = getIntent();
-        String firstname = intent.getStringExtra("name");
-        String firstemail = intent.getStringExtra("email");
-        String firstphone = intent.getStringExtra("phone");
-        String firstpassword = intent.getStringExtra("password");
-        tv1.setText(firstname);
-        tv2.setText(firstemail);
-        tv3.setText(firstphone);
-        tv4.setText(firstpassword);
+        String firstName = intent.getStringExtra(ARG_NAME);
+        String firstEmail = intent.getStringExtra(ARG_EMAIL);
+        String firstPhone = intent.getStringExtra(ARG_PHONE);
+        String firstPassword = intent.getStringExtra(ARG_PASSWORD);
+        tv1.setText(firstName);
+        tv2.setText(firstEmail);
+        tv3.setText(firstPhone);
+        tv4.setText(firstPassword);
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,7 +79,7 @@ public class Main2Activity extends AppCompatActivity {
                 if (ContextCompat.checkSelfPermission(Main2Activity.this, Manifest.permission.CAMERA)
                         != PackageManager.PERMISSION_GRANTED) {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                        requestPermissions(new String[]{Manifest.permission.CAMERA}, REQUEST_CODE);
+                        requestPermissions(new String[]{Manifest.permission.CAMERA}, REQUEST_CODE_CAMERA);
                     }
 
                 } else {
@@ -89,7 +94,7 @@ public class Main2Activity extends AppCompatActivity {
 
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == REQUEST_CODE) {
+        if (requestCode == REQUEST_CODE_CAMERA) {
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 Toast.makeText(this, "camera Permission granted", Toast.LENGTH_SHORT).show();
 
@@ -98,4 +103,17 @@ public class Main2Activity extends AppCompatActivity {
             }
         }
     }
+
+    void initUi() {
+        tv1 = findViewById(R.id.name1);
+        tv2 = findViewById(R.id.email1);
+        tv3 = findViewById(R.id.number1);
+        tv4 = findViewById(R.id.password1);
+        ed = findViewById(R.id.url);
+        button2 = findViewById(R.id.search);
+        button3 = findViewById(R.id.permission);
+        webView = findViewById(R.id.webview_main);
+
+    }
+
 }

@@ -8,33 +8,49 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import static com.example.intentsession.BundleConstants.ARG_EMAIL;
+import static com.example.intentsession.BundleConstants.ARG_NAME;
+import static com.example.intentsession.BundleConstants.ARG_PASSWORD;
+import static com.example.intentsession.BundleConstants.ARG_PHONE;
+
 public class MainActivity extends AppCompatActivity {
+    EditText name;
+    EditText email;
+    EditText password;
+    EditText phone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final EditText name=findViewById(R.id.name);
-        final EditText email=findViewById(R.id.email);
-        final EditText password=findViewById(R.id.password);
-        final EditText phone=findViewById(R.id.phone);
-        Button button=findViewById(R.id.signup);
+        name = findViewById(R.id.name);
+        email = findViewById(R.id.email);
+        password = findViewById(R.id.password);
+        phone = findViewById(R.id.phone);
+        Button button = findViewById(R.id.signup);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String fullname=name.getText().toString();
-                String fullemail=email.getText().toString();
-                String fullpassword=password.getText().toString();
-                String fullphone=phone.getText().toString();
-                Intent intent=new Intent(MainActivity.this,Main2Activity.class);
-                intent.putExtra("name",fullname);
-                intent.putExtra("email",fullemail);
-                intent.putExtra("password",fullpassword);
-                intent.putExtra("phone",fullphone);
-                startActivity(intent);
+
+                dataPass();
+
 
             }
         });
+
+    }
+
+    void dataPass() {
+        String fullName = name.getText().toString();
+        String fullEmail = email.getText().toString();
+        String fullPassword = password.getText().toString();
+        String fullPhone = phone.getText().toString();
+        Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+        intent.putExtra(ARG_NAME, fullName);
+        intent.putExtra(ARG_EMAIL, fullEmail);
+        intent.putExtra(ARG_PASSWORD, fullPassword);
+        intent.putExtra(ARG_PHONE, fullPhone);
+        startActivity(intent);
 
     }
 }
