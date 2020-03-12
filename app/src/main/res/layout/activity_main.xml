@@ -14,46 +14,44 @@
         android:layout_height="wrap_content"
         android:id="@+id/name"
         android:hint="@string/name"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="@dimen/edit_text_act_main_margintop"
         android:layout_gravity="center_horizontal"
         android:textColorHint="@color/black"
-android:padding="10dp"
-        android:background="@drawable/text_background"
-        />
+        android:padding="@dimen/edittext_name_activitymain_padding"
+        android:background="@drawable/text_background" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/email"
         android:hint="@string/Email"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="@dimen/edit_text_act_main_margintop"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/text_background"
         android:textColorHint="@color/black"
-        android:padding="10dp"
-        />
+        android:padding="@dimen/edittext_name_activitymain_padding" />
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/password"
         android:hint="@string/Password"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="@dimen/edit_text_act_main_margintop"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/text_background"
         android:textColorHint="@color/black"
-        android:padding="10dp"
-        />
+        android:padding="@dimen/edittext_name_activitymain_padding" />
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/phone"
         android:hint="@string/phonenumber"
-        android:padding="10dp"
-        android:layout_marginTop="80dp"
+        android:padding="@dimen/edittext_name_activitymain_padding"
+        android:layout_marginTop="@dimen/edit_text_act_main_margintop"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/text_background"
-        android:textColorHint="@color/black"
-        />
+        android:textColorHint="@color/black" />
 
     <Button
         android:layout_width="wrap_content"
@@ -62,6 +60,6 @@ android:padding="10dp"
         android:id="@+id/signup"
         android:textColor="@color/black"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="80dp"/>
+        android:layout_marginTop="@dimen/edit_text_act_main_margintop"/>
 
 </LinearLayout>

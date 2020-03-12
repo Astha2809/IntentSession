@@ -1,4 +1,4 @@
-package com.example.intentsession;
+package com.example.intentsession.utils;
 
 public final class BundleConstants {
     public static final String ARG_NAME = "name";

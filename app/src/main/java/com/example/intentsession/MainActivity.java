@@ -8,10 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import static com.example.intentsession.BundleConstants.ARG_EMAIL;
-import static com.example.intentsession.BundleConstants.ARG_NAME;
-import static com.example.intentsession.BundleConstants.ARG_PASSWORD;
-import static com.example.intentsession.BundleConstants.ARG_PHONE;
+import static com.example.intentsession.utils.BundleConstants.ARG_EMAIL;
+import static com.example.intentsession.utils.BundleConstants.ARG_NAME;
+import static com.example.intentsession.utils.BundleConstants.ARG_PASSWORD;
+import static com.example.intentsession.utils.BundleConstants.ARG_PHONE;
 
 public class MainActivity extends AppCompatActivity {
     EditText name;

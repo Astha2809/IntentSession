@@ -16,10 +16,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import static com.example.intentsession.BundleConstants.ARG_EMAIL;
-import static com.example.intentsession.BundleConstants.ARG_NAME;
-import static com.example.intentsession.BundleConstants.ARG_PASSWORD;
-import static com.example.intentsession.BundleConstants.ARG_PHONE;
+import static com.example.intentsession.utils.BundleConstants.ARG_EMAIL;
+import static com.example.intentsession.utils.BundleConstants.ARG_NAME;
+import static com.example.intentsession.utils.BundleConstants.ARG_PASSWORD;
+import static com.example.intentsession.utils.BundleConstants.ARG_PHONE;
 
 public class Main2Activity extends AppCompatActivity {
     private static final int REQUEST_CODE_CAMERA = 100;

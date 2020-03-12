@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/text_view_act_main_margintop"
         android:background="@drawable/text_background"
         android:textColor="@color/black"/>
 
@@ -30,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/text_view_act_main_margintop"
         android:background="@drawable/text_background"
         android:textColor="@color/black"/>
 
@@ -39,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/text_view_act_main_margintop"
         android:textColor="@color/black"
         android:background="@drawable/text_background" />
 
@@ -48,7 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/text_view_act_main_margintop"
         android:textColor="@color/black"
 
         android:background="@drawable/text_background" />
@@ -57,7 +57,7 @@
         android:id="@+id/url"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/text_view_act_main_margintop"
         android:text="@string/url"
         android:textColorHint="@color/black"/>
 
@@ -65,7 +65,7 @@
         android:id="@+id/search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/text_view_act_main_margintop"
         android:textColor="@color/black"
         android:text="@string/search" />
 
@@ -73,7 +73,7 @@
         android:id="@+id/permission"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/text_view_act_main_margintop"
         android:text="@string/permission"
         android:textColor="@color/black"/>
 
