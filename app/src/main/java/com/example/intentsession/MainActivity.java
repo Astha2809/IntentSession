@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void dataPass() {
+    void dataPass() {
         String fullName = name.getText().toString();
         String fullEmail = email.getText().toString();
         String fullPassword = password.getText().toString();
