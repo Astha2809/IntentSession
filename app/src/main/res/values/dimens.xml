@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <dimen name="webview_width">300dp</dimen>
+    <dimen name="webview_main_width">300dp</dimen>
     <dimen name="webview_height">200dp</dimen>
     <dimen name="webview_main_height">200dp</dimen>
-    <dimen name="webview_main_width">300</dimen>
+
     <dimen name="edit_text_act_main_margintop">60dp</dimen>
     <dimen name="edittext_name_activitymain_padding">10dp</dimen>
     <dimen name="text_view_act_main_margintop">20dp</dimen>

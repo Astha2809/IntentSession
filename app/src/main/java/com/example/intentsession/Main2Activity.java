@@ -22,15 +22,16 @@ import static com.example.intentsession.utils.BundleConstants.ARG_PASSWORD;
 import static com.example.intentsession.utils.BundleConstants.ARG_PHONE;
 
 public class Main2Activity extends AppCompatActivity {
+    //class variables should always be declare final.
     private static final int REQUEST_CODE_CAMERA = 100;
-    TextView tv1;
-    TextView tv2;
-    TextView tv3;
-    TextView tv4;
-    EditText ed;
-    Button button2;
-    Button button3;
-    WebView webView;
+   private TextView textViewname;
+    private TextView textViewemail;
+    private TextView textViewnumber;
+    private TextView textViewpassword;
+    private EditText editText;
+    private Button button2;
+    private Button button3;
+   private WebView webView;
 
 
     @Override
@@ -38,18 +39,11 @@ public class Main2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         initUi();
+        receiveData();
 
         //wv1.setWebViewClient(new MyBrowser());
 
-        Intent intent = getIntent();
-        String firstName = intent.getStringExtra(ARG_NAME);
-        String firstEmail = intent.getStringExtra(ARG_EMAIL);
-        String firstPhone = intent.getStringExtra(ARG_PHONE);
-        String firstPassword = intent.getStringExtra(ARG_PASSWORD);
-        tv1.setText(firstName);
-        tv2.setText(firstEmail);
-        tv3.setText(firstPhone);
-        tv4.setText(firstPassword);
+
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,7 +60,7 @@ public class Main2Activity extends AppCompatActivity {
 //        catch (ActivityNotFoundException exception) {
 //            Toast.makeText(Main2Activity.this, "Error text", Toast.LENGTH_SHORT).show();
 //        }
-                String url = ed.getText().toString();
+                String url = editText.getText().toString();
                 webView.loadUrl("http://" + url);
 
 
@@ -104,15 +98,28 @@ public class Main2Activity extends AppCompatActivity {
         }
     }
 
-    void initUi() {
-        tv1 = findViewById(R.id.name1);
-        tv2 = findViewById(R.id.email1);
-        tv3 = findViewById(R.id.number1);
-        tv4 = findViewById(R.id.password1);
-        ed = findViewById(R.id.url);
+   private void initUi() {
+        textViewname = findViewById(R.id.name1);
+        textViewnumber = findViewById(R.id.email1);
+        textViewemail = findViewById(R.id.number1);
+        textViewpassword = findViewById(R.id.password1);
+        editText = findViewById(R.id.url);
         button2 = findViewById(R.id.search);
         button3 = findViewById(R.id.permission);
         webView = findViewById(R.id.webview_main);
+
+    }
+    private void receiveData(){
+
+        Intent intent = getIntent();
+        String firstName = intent.getStringExtra(ARG_NAME);
+        String firstEmail = intent.getStringExtra(ARG_EMAIL);
+        String firstPhone = intent.getStringExtra(ARG_PHONE);
+        String firstPassword = intent.getStringExtra(ARG_PASSWORD);
+        textViewname.setText(firstName);
+        textViewemail.setText(firstEmail);
+        textViewnumber.setText(firstPhone);
+        textViewpassword.setText(firstPassword);
 
     }
 
